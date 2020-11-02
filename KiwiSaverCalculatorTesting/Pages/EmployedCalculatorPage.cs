@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using KiwiSaverCalculatorTesting.Extensions;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -50,8 +51,8 @@ namespace KiwiSaverCalculatorTesting.Pages
         public IWebElement EleOptionRiskProfileBalanced => Driver.FindElement(By.CssSelector("#radio-option-019"));
         public IWebElement EleOptionRiskProfileGrowth => Driver.FindElement(By.CssSelector("#radio-option-01C"));
 
-        public IWebElement EleButtonViewKiwiSaverRetirementProjections => Driver.FindElement(By.CssSelector("button.btn-results-reveal.btn-has-chevron"));
+        public IWebElement EleButtonViewKiwiSaverRetirementProjections => Driver.GetElementAndScrollTo(By.CssSelector("button.btn-results-reveal.btn-has-chevron"));
 
-        public IWebElement EleResultValue => Driver.FindElement(By.CssSelector("span.result-value.result-currency"));
+        public IWebElement EleResultValue => Driver.GetElementAndScrollTo(By.CssSelector("span.result-value.result-currency"));
     }
 }
