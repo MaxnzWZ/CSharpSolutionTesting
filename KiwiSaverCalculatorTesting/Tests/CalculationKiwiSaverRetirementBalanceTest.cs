@@ -69,6 +69,9 @@ namespace KiwiSaverCalculatorTesting.Tests
                 // Click the calculator button to calculator
                 employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
 
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
+
                 // Check whether the calculator button will disappear after clicking the calculator button
                 Assert.IsFalse(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
