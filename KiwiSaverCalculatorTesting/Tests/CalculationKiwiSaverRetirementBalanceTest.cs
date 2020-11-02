@@ -25,6 +25,7 @@ namespace KiwiSaverCalculatorTesting.Tests
         [SetUp]
         public void Setup()
         {
+            // Open Kiwi Saver Calculator
             Driver = new TWebDriver();
             Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl($"{baseUrl}/kiwisaver/calculators/kiwisaver-calculator/");
@@ -44,6 +45,7 @@ namespace KiwiSaverCalculatorTesting.Tests
         {
             UITest(() =>
             {
+                // Open the calculator for Employed customers 
                 utils.ClickInIframe(Driver, calculatorHomePage.EleDropDownArrowEmploymentStatus);
 
                 Thread.Sleep(3000);
@@ -52,21 +54,28 @@ namespace KiwiSaverCalculatorTesting.Tests
                 var wait2 = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
                 wait2.Until(driver => employedCalculatorPage.EleInputSalaryPerYear.Displayed);
 
+                // Make sure the calculator button is not enabled before filling the related fields
                 Assert.IsFalse(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
+                // Fill the fields for the calculation
                 employedCalculatorPage.EleInputCurrentAge.SendKeys("30");
                 employedCalculatorPage.EleInputSalaryPerYear.SendKeys("82000");
                 employedCalculatorPage.EleOptionKiwiSaverMemberContribution4Percent.Click();
                 employedCalculatorPage.EleOptionRiskProfileDefensive.Click();
 
+                // Make sure the calculator button is enabled after the fields filling
                 Assert.IsTrue(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
+                // Click the calculator button to calculator
                 employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
 
+                // Check whether the calculator button will disappear after clicking the calculator button
                 Assert.IsFalse(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
+                // Check whether there is calculated value 
                 Assert.IsTrue(employedCalculatorPage.EleResultValue.Displayed);
 
+                // Check whether the calcuted value is as expected
                 Assert.IsTrue(employedCalculatorPage.EleResultValue.Text.Contains("436,365"));
             });
         }
@@ -76,6 +85,7 @@ namespace KiwiSaverCalculatorTesting.Tests
         {
             UITest(() =>
             {
+                // Calculation for self-employed customers
                 utils.ClickInIframe(Driver, calculatorHomePage.EleDropDownArrowEmploymentStatus);
 
                 Thread.Sleep(3000);
@@ -114,6 +124,7 @@ namespace KiwiSaverCalculatorTesting.Tests
         {
             UITest(() =>
             {
+                // Calculation for not-employed customers
                 utils.ClickInIframe(Driver, calculatorHomePage.EleDropDownArrowEmploymentStatus);
 
                 Thread.Sleep(3000);

@@ -9,12 +9,14 @@ namespace KiwiSaverCalculatorTesting.Utils
 {
     public class Utilities
     {
+        // Perform the click operation in iframe
         public void ClickInIframe(IWebDriver driver, IWebElement element)
         {
             IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
             executor.ExecuteScript("arguments[0].click();", element);
         }
 
+        // Take screenshot with selenium
         public static void TakeScreenshot(IWebDriver driver)
         {
             // Create output directory of screenshots

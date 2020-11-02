@@ -28,14 +28,17 @@ namespace KiwiSaverCalculatorTesting
         {
             UITest(() =>
             {
+                // Check the path to Calculator page in home page
                 HomePage homePage = new HomePage();
                 homePage.EleKiwiSaver.Click();
 
+                // Wait Risk Profile Retirement Calculator to display in side navigation
                 var wait1 = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
                 wait1.Until(driver => homePage.EleRiskProfileRetirementCalculatorIcon.Displayed);
 
                 Assert.That(homePage.EleMenuTitle.Displayed, Is.True, "The element of Risk profile and retirement calculator is not found");
 
+                // Find the side navigation link of KiwiSaver Retirement Calculator and click it to enter Calculator
                 homePage.EleRiskProfileRetirementCalculatorIcon.Click();
 
                 Assert.That(homePage.EleKiwiSaverRetirementCalculator.Displayed, Is.True, "The element of KiwiSaver Retirement Calculator is not found");

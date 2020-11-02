@@ -12,6 +12,7 @@ namespace KiwiSaverCalculatorTesting
         public static string baseUrl = "https://www.westpac.co.nz";
         public static IWebDriver Driver { get; set; }
 
+        // Use for take screenshot when test failed
         public static void UITest(Action action)
         {
             try

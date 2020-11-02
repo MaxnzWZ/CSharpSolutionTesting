@@ -8,6 +8,7 @@ namespace KiwiSaverCalculatorTesting.Extensions
 {
     public static class WebDriverExtensions
     {
+        // Locate element within timeout value
         public static IWebElement FindElement(this IWebDriver driver, By by, int timeoutInSeconds)
         {
             if (timeoutInSeconds > 0)
@@ -18,6 +19,7 @@ namespace KiwiSaverCalculatorTesting.Extensions
             return driver.FindElement(by);
         }
 
+        // Scroll to the located element
         public static IWebElement GetElementAndScrollTo(this IWebDriver driver, By by)
         {
             var js = (IJavaScriptExecutor)driver;

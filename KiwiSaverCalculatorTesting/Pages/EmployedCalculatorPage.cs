@@ -7,6 +7,7 @@ namespace KiwiSaverCalculatorTesting.Pages
 {
     class EmployedCalculatorPage: BasePage
     {
+        // info icons' locators
         public IWebElement EleCurrentAgeInfoIcon => Driver.FindElements(By.CssSelector("i.icon"))[0];
         public IWebElement EleEmploymentStatusInfoIcon => Driver.FindElements(By.CssSelector("i.icon"))[1];
         public IWebElement EleSalaryPerYearInfoIcon => Driver.FindElements(By.CssSelector("i.icon"))[2];
@@ -16,6 +17,7 @@ namespace KiwiSaverCalculatorTesting.Pages
         public IWebElement EleRiskProfileInfoIcon => Driver.FindElements(By.CssSelector("i.icon"))[6];
         public IWebElement EleSavingGoalAtRetirementInfoIcon => Driver.FindElements(By.CssSelector("i.icon"))[7];
 
+        // icon info locators
         public IWebElement EleCurrentAgeInfo => Driver.FindElements(By.CssSelector("div.field-message.message-info"))[0];
         public IWebElement EleEmploymentStatusInfo => Driver.FindElements(By.CssSelector("div.field-message.message-info"))[1];
         public IWebElement EleSalaryPerYearInfo => Driver.FindElements(By.CssSelector("div.field-message.message-info"))[2];
@@ -28,18 +30,21 @@ namespace KiwiSaverCalculatorTesting.Pages
         public IWebElement EleLinkKiwiSaverRiskProfile => Driver.FindElement(By.LinkText("KiwiSaver Risk Profiler"));
         public IWebElement EleLinkKiwiSortedRetirementPlanner => Driver.FindElement(By.LinkText("Sorted Retirement Planner"));
 
+        // input type locators
         public IWebElement EleInputCurrentAge => Driver.FindElements(By.CssSelector("input[type='text']"))[0];
         public IWebElement EleInputSalaryPerYear => Driver.FindElements(By.CssSelector("input[type='text']"))[1];
         public IWebElement EleInputCurrentKiwiSaverBalance => Driver.FindElements(By.CssSelector("input[type='text']"))[2];
         public IWebElement EleInputVoluntaryContributions => Driver.FindElements(By.CssSelector("input[type='text']"))[3];
         public IWebElement EleInputSavingsGoalAtRetirement => Driver.FindElements(By.CssSelector("input[type='text']"))[4];
 
+        // kiwi saver member contribution radio options
         public IWebElement EleOptionKiwiSaverMemberContribution3Percent => Driver.FindElement(By.CssSelector("#radio-option-04C"));
         public IWebElement EleOptionKiwiSaverMemberContribution4Percent => Driver.FindElement(By.CssSelector("#radio-option-04F"));
         public IWebElement EleOptionKiwiSaverMemberContribution6Percent => Driver.FindElement(By.CssSelector("#radio-option-04I"));
         public IWebElement EleOptionKiwiSaverMemberContribution8Percent => Driver.FindElement(By.CssSelector("#radio-option-04L"));
         public IWebElement EleOptionKiwiSaverMemberContribution10Percent => Driver.FindElement(By.CssSelector("#radio-option-04O"));
 
+        // risk profile radio options
         public IWebElement EleOptionRiskProfileDefensive => Driver.FindElement(By.CssSelector("#radio-option-013"));
         public IWebElement EleOptionRiskProfileConservative => Driver.FindElement(By.CssSelector("#radio-option-016"));
         public IWebElement EleOptionRiskProfileBalanced => Driver.FindElement(By.CssSelector("#radio-option-019"));

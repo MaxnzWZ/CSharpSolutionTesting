@@ -52,11 +52,15 @@ namespace KiwiSaverCalculatorTesting.Tests
         {
             UITest(() =>
             {
+                // The actual current age info displayed is not as expected. 
+                // The test case should fail as expected
                 String expectedCurrentAgeInfo = "This calculator has an age limit of 64 years old as you need to be under the age of 65 to join KiwiSaver.";
                 utils.ClickInIframe(Driver, employedCalculatorPage.EleCurrentAgeInfoIcon);
 
+                // Check whether info is equal to the expected value
                 Assert.That(employedCalculatorPage.EleCurrentAgeInfo.Text, Is.EqualTo(expectedCurrentAgeInfo));
 
+                // Check whether there is only corresponding info displayed after click the info icon
                 Assert.IsTrue(employedCalculatorPage.EleCurrentAgeInfo.Displayed);
                 Assert.IsFalse(employedCalculatorPage.EleEmploymentStatusInfo.Displayed);
                 Assert.IsFalse(employedCalculatorPage.EleSalaryPerYearInfo.Displayed);
