@@ -29,7 +29,7 @@ or
 git clone git@github.com:MaxnzWZ/CSharpSolutionTesting.git (through ssh) 
 ``` 
 ## How to run test cases
-### Open the project with Visual Studio
+### Open the project with Visual Studio (open KiwiSaverCalculatorTesting.sln)
 ![Open Project](images/openproject.JPG)
 
 ### Open test explore
