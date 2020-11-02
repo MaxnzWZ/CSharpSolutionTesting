@@ -113,6 +113,9 @@ namespace KiwiSaverCalculatorTesting.Tests
 
                 selfEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
 
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
+
                 Assert.IsFalse(selfEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
                 Assert.IsTrue(selfEmployedCalculatorPage.EleResultValue.Displayed);
@@ -151,6 +154,9 @@ namespace KiwiSaverCalculatorTesting.Tests
                 Assert.IsTrue(notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
                 notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
+
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
 
                 Assert.IsFalse(notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
