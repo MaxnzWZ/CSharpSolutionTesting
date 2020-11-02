@@ -33,29 +33,26 @@ git clone git@github.com:MaxnzWZ/CSharpSolutionTesting.git (through ssh)
 ![Open Project](images/openproject.JPG)
 
 ### Open test explore
-![Open Test Explore](images/opentestexplore.JPG)
+![Open test exmplore](/images/opentestexplore.jpg)
 
 ### Build solution
-![Build solution](images/buildSolution.JPG)
+![Build solution](images/buildSolution.jpg)
 
 ### Select test suites in test explore; right click and select Run to run testing
-![runselectedtestsuite](images/selecttestsuitetorun.JPG)
+![Run selected test suite](images/selecttestsuitetorun.jpg)
 
 ### Check test result
 #### Check summary of test result
-![Check summary of the test result](images/testresultsummary.JPG)
-
-#### Check summary of test result
-![Check summary of the test result](images/testresultsummary.JPG)
+![Check summary of the test result](images/testresultsummary.jpg)
 
 #### Check failed test case
-![Check failed reason message](images/checkerrormessage.JPG)
+![Check failed reason message](images/checkerrormessage.jpg)
 
 #### Check detailed information of failed test case
-![Check details of the failed test case](images/checkfailuredetails.JPG)
+![Check details of the failed test case](images/checkfailuredetails.jpg)
 
 #### Check screenshot of failed test case
-![Check screenshot of the failed test case](images/checkscreenshot.JPG)
+![Check screenshot of failed test case](images/checkscreenshot.jpg)
 
 #### Screenshots can be found in Screenshots under project folder
-![Check screenshots in Screenshots under project folder](images/outputscreenshots.JPG)
+![Check screenshots in Screenshots under project folder](images/outputscreenshots.jpg)
