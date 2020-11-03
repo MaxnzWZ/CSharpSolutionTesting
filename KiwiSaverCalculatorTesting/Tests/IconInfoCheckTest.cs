@@ -13,7 +13,7 @@ using System.Threading;
 namespace KiwiSaverCalculatorTesting.Tests
 {
     [TestFixture(typeof(ChromeDriver))]
-    [TestFixture(typeof(FirefoxDriver))]
+    //[TestFixture(typeof(FirefoxDriver))]
     class IconInfoCheckTest<TWebDriver> : BasePage where TWebDriver : IWebDriver, new()
     {
         CalculatorHomePage calculatorHomePage = new CalculatorHomePage();
