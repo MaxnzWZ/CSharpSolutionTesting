@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace KiwiSaverCalculatorTesting
 {
-    //[TestFixture(typeof(ChromeDriver))]
+    [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(FirefoxDriver))]
     public class HomePagePathCheckTest<TWebDriver> : BasePage where TWebDriver : IWebDriver, new()
     {
