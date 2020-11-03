@@ -1,5 +1,13 @@
 # CSharpSolutionTesting
-This is an end to end example automation testing solution by using CSharp + NUnit (.net core) + Selenium. 
+This is an end to end example automation testing solution by using CSharp + NUnit (.net core) + Selenium WebDriver. 
+
+The testing supports multiple browsers (current setting is for runing the testing with Chrome and Firefox).
+
+Here are links of NUnit and Selenium
+
+[NUnit](https://nunit.org/)
+
+[Selenium](https://www.selenium.dev/documentation/en/)
 
 
 ## Prerequisites
@@ -20,19 +28,31 @@ git clone https://github.com/MaxnzWZ/CSharpSolutionTesting.git (through https)
 or
 git clone git@github.com:MaxnzWZ/CSharpSolutionTesting.git (through ssh) 
 ``` 
+## How to run test cases
+### Open the project with Visual Studio (open KiwiSaverCalculatorTesting.sln)
+![Open Project](images/openproject.JPG)
 
-## Run Cypress testing
-### Run with Cypress test runner
-#### Step 1. Open Cypress test runner
-```
-npx cypress open
-```
+### Open test explore
+![Open test exmplore](/images/opentestexplore.jpg)
 
-#### Step 2. Select the available browers installed in your local computer to run the testing
-![Change browser](images/changeBrowser.jpg)
+### Build solution
+![Build solution](images/buildSolution.jpg)
 
-#### Step 3. Select the individual test suite to run or select to run all test suites
-![Run tests](images/runTests.jpg)
+### Select test suites in test explore; right click and select Run to run testing
+![Run selected test suite](images/selecttestsuitetorun.jpg)
 
+### Check test result
+#### Check summary of test result
+![Check summary of the test result](images/testresultsummary.jpg)
 
-### Open the project with Visual studio
+#### Check failed test case
+![Check failed reason message](images/checkerrormessage.jpg)
+
+#### Check detailed information of failed test case
+![Check details of the failed test case](images/checkfailuredetails.jpg)
+
+#### Check screenshot of failed test case
+![Check screenshot of failed test case](images/checkscreenshot.jpg)
+
+#### Screenshots can be found in Screenshots under project folder
+![Check screenshots in Screenshots under project folder](images/outputscreenshots.jpg)

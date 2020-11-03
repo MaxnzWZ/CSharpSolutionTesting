@@ -63,14 +63,14 @@ namespace KiwiSaverCalculatorTesting.Tests
                 employedCalculatorPage.EleOptionKiwiSaverMemberContribution4Percent.Click();
                 employedCalculatorPage.EleOptionRiskProfileDefensive.Click();
 
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Enabled);
+
                 // Make sure the calculator button is enabled after the fields filling
                 Assert.IsTrue(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
                 // Click the calculator button to calculator
                 employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
-
-                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
-                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
 
                 // Check whether the calculator button will disappear after clicking the calculator button
                 Assert.IsFalse(employedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
@@ -109,12 +109,12 @@ namespace KiwiSaverCalculatorTesting.Tests
 
                 selfEmployedCalculatorPage.EleInputSavingsGoalAtRetirement.SendKeys("290000");
 
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Enabled);
+
                 Assert.IsTrue(selfEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
                 selfEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
-
-                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
-                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
 
                 Assert.IsFalse(selfEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
@@ -151,12 +151,12 @@ namespace KiwiSaverCalculatorTesting.Tests
 
                 notEmployedCalculatorPage.EleInputSavingsGoalAtRetirement.SendKeys("200000");
 
+                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+                wait3.Until(driver => employedCalculatorPage.EleResultValue.Enabled);
+
                 Assert.IsTrue(notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Enabled);
 
                 notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Click();
-
-                var wait3 = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
-                wait3.Until(driver => employedCalculatorPage.EleResultValue.Displayed);
 
                 Assert.IsFalse(notEmployedCalculatorPage.EleButtonViewKiwiSaverRetirementProjections.Displayed);
 
